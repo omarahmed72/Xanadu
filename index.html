@@ -1,0 +1,1414 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arab Organizers - Meeting, Event and Conference</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ========================================== -->
+    <!-- بداية ملف الـ CSS (يمكنك نقله لملف style.css) -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- ========================================== -->
+    <!-- <style>
+      :root {
+        --primary-red: #d32f2f;
+        --primary-red-hover: #b71c1c;
+        --dark-bg: #120923;
+        --darker-bg: #0a0414;
+        --text-gray: #6c757d;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        overflow-x: clip;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      .serif-font {
+        font-family: "Playfair Display", serif;
+      }
+
+      /* --- Top Bar --- */
+      .top-bar {
+        background-color: var(--primary-red);
+        font-size: 13px;
+        padding: 8px 0;
+      }
+      .top-bar a {
+        color: white;
+        text-decoration: none;
+        margin-left: 10px;
+        transition: 0.3s;
+      }
+      .top-bar a:hover {
+        color: #f8f9fa;
+        opacity: 0.8;
+      }
+      .social-icons a {
+        margin-left: 15px;
+        font-size: 14px;
+      }
+
+      /* --- Navbar --- */
+      .navbar {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        padding: 15px 0;
+        background: white;
+        transition: all 0.3s ease;
+      }
+      .navbar-brand img {
+        max-height: 50px;
+      }
+      .nav-link {
+        font-weight: 600;
+        font-size: 14px;
+        color: #333 !important;
+        margin: 0 10px;
+        text-transform: capitalize;
+        transition: 0.3s;
+      }
+      .nav-link:hover,
+      .nav-link.active {
+        color: var(--primary-red) !important;
+      }
+      .search-btn {
+        background-color: var(--primary-red);
+        color: white;
+        border: none;
+        padding: 5px 12px;
+        border-radius: 4px;
+        transition: 0.3s;
+      }
+      .search-btn:hover {
+        background-color: var(--primary-red-hover);
+      }
+
+      /* --- Hero Section --- */
+      .hero-section {
+        position: relative;
+        height: 80vh;
+      }
+      .heroSwiper {
+        width: 100%;
+        height: 100%;
+      }
+      .heroSwiper .swiper-slide {
+        position: relative;
+        display: flex;
+        align-items: center;
+        overflow: hidden; /* إضافة هذه الخاصية لمنع الصورة من الخروج عن الإطار عند التكبير */
+      }
+
+      /* تأثير التكبير البطيء للخلفية (Zoom Effect) */
+      .hero-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: transform 7s linear; /* مدة التكبير البطيء */
+        transform: scale(1);
+        z-index: 0;
+      }
+      .swiper-slide-active .hero-bg,
+      .swiper-slide-duplicate-active .hero-bg {
+        transform: scale(
+          1.15
+        ); /* عندما تصبح الشريحة نشطة، يتم تكبير الصورة ببطء */
+      }
+
+      .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.55);
+        z-index: 1;
+      }
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        color: white;
+        max-width: 800px;
+      }
+
+      /* تأثير دخول النصوص (Entrance Animations) */
+      .hero-content h1,
+      .hero-content .subtitle-list,
+      .hero-content p,
+      .hero-content .btn-wrap {
+        opacity: 0;
+        transform: translateY(50px);
+        transition:
+          opacity 0.8s ease,
+          transform 0.8s ease;
+      }
+
+      .swiper-slide-active .hero-content h1,
+      .swiper-slide-duplicate-active .hero-content h1 {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: 0.3s;
+      }
+      .swiper-slide-active .hero-content .subtitle-list,
+      .swiper-slide-duplicate-active .hero-content .subtitle-list {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: 0.5s;
+      }
+      .swiper-slide-active .hero-content p,
+      .swiper-slide-duplicate-active .hero-content p {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: 0.7s;
+      }
+      .swiper-slide-active .hero-content .btn-wrap,
+      .swiper-slide-duplicate-active .hero-content .btn-wrap {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: 0.9s;
+      }
+
+      .hero-content h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 20px;
+      }
+      .btn-custom {
+        background-color: var(--primary-red);
+        color: white;
+        padding: 12px 30px;
+        border-radius: 0;
+        font-weight: 500;
+        text-transform: uppercase;
+        border: 2px solid var(--primary-red);
+        transition: all 0.3s ease;
+      }
+      .btn-custom:hover {
+        background-color: transparent;
+        color: var(--primary-red);
+      }
+      .btn-outline-custom {
+        background-color: transparent;
+        color: white;
+        padding: 12px 30px;
+        border-radius: 0;
+        font-weight: 500;
+        text-transform: uppercase;
+        border: 2px solid white;
+        transition: all 0.3s ease;
+      }
+      .btn-outline-custom:hover {
+        background-color: white;
+        color: #333;
+      }
+
+      /* Custom Swiper Navigation arrows for Hero */
+      .heroSwiper .swiper-button-next::after,
+      .heroSwiper .swiper-button-prev::after {
+        font-size: 24px;
+        font-weight: bold;
+      }
+      .heroSwiper .swiper-button-next,
+      .heroSwiper .swiper-button-prev {
+        color: white;
+        background: rgba(255, 255, 255, 0.1);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        transition: 0.3s;
+      }
+      .heroSwiper .swiper-button-next:hover,
+      .heroSwiper .swiper-button-prev:hover {
+        background: var(--primary-red);
+      }
+
+      /* --- About Section --- */
+      .about-section {
+        padding: 100px 0;
+      }
+      .about-img-wrap {
+        position: relative;
+        min-height: 450px;
+      }
+      .about-img-wrap img {
+        position: absolute;
+        border: 8px solid white;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: transform 0.5s ease;
+      }
+      .about-img-wrap img:hover {
+        transform: scale(1.03);
+        z-index: 5;
+      }
+      .img-1 {
+        top: 0;
+        left: 0;
+        width: 70%;
+        z-index: 1;
+      }
+      .img-2 {
+        bottom: 0;
+        right: 0;
+        width: 60%;
+        z-index: 2;
+      }
+
+      .section-title {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #222;
+      }
+      .about-text {
+        color: var(--text-gray);
+        line-height: 1.8;
+        margin-bottom: 30px;
+      }
+      .counter-box {
+        margin-top: 40px;
+      }
+      .counter-num {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--primary-red);
+        font-family: "Poppins", sans-serif;
+        margin-bottom: 5px;
+      }
+      .counter-text {
+        font-size: 14px;
+        color: #555;
+        font-weight: 500;
+      }
+
+      /* --- Services Section --- */
+      .services-section {
+        background-color: var(--dark-bg);
+        padding: 100px 0;
+        color: white;
+      }
+      .services-section .section-title {
+        color: white;
+        text-align: center;
+        margin-bottom: 60px;
+      }
+      .services-section .section-title::after {
+        content: "﹋﹋﹋";
+        display: block;
+        color: var(--text-gray);
+        font-size: 20px;
+        letter-spacing: 5px;
+        margin-top: 10px;
+      }
+      .service-box {
+        padding: 40px 20px;
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        transition: all 0.4s ease;
+        height: 100%;
+      }
+      .service-box:hover {
+        background-color: rgba(255, 255, 255, 0.03);
+        transform: translateY(-10px);
+        border-color: rgba(211, 47, 47, 0.3);
+      }
+      .service-icon {
+        font-size: 40px;
+        color: white;
+        margin-bottom: 20px;
+        transition: color 0.3s;
+      }
+      .service-box:hover .service-icon {
+        color: var(--primary-red);
+      }
+      .service-box h4 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+      }
+      .service-box p {
+        color: #aaa;
+        font-size: 14px;
+        line-height: 1.7;
+      }
+
+      /* --- Events Section --- */
+      .events-section {
+        padding: 100px 0;
+        background-color: #fcfcfc;
+      }
+      .events-section .section-title {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+      .events-section .section-title span {
+        color: var(--primary-red);
+      }
+      .events-section .section-title::after {
+        content: "﹋﹋﹋";
+        display: block;
+        color: #ccc;
+        font-size: 20px;
+        letter-spacing: 5px;
+        margin-top: 10px;
+      }
+      .event-card {
+        border: none;
+        border-radius: 0;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+        background: white;
+        height: 100%;
+      }
+      .event-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+      .event-card img {
+        border-radius: 0;
+        height: 350px;
+        object-fit: cover;
+      }
+      .event-card .card-body {
+        padding: 30px;
+      }
+      .event-date {
+        color: var(--primary-red);
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 1;
+        text-align: center;
+        border-right: 1px solid #eee;
+        padding-right: 15px;
+        margin-right: 15px;
+      }
+      .event-date span {
+        display: block;
+        font-size: 12px;
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+      .event-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+        font-family: "Playfair Display", serif;
+      }
+      .event-desc {
+        font-size: 13px;
+        color: var(--text-gray);
+        margin-bottom: 15px;
+      }
+      .event-location {
+        font-size: 12px;
+        color: #888;
+        margin-bottom: 20px;
+      }
+      .event-location i {
+        color: var(--primary-red);
+        margin-right: 5px;
+      }
+      .btn-read-more {
+        background-color: var(--primary-red);
+        color: white;
+        padding: 8px 20px;
+        font-size: 13px;
+        border-radius: 4px;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+      .btn-read-more:hover {
+        background-color: var(--primary-red-hover);
+        color: white;
+      }
+
+      /* --- Testimonial Section --- */
+      .testimonial-section {
+        padding: 100px 0;
+        background-color: #f9f9f9;
+      }
+      .testi-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+      .testi-img {
+        width: 50%;
+      }
+      .testi-img img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+      }
+      .testi-content {
+        background-color: rgba(26, 32, 60, 0.75);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: white;
+        padding: 60px;
+        width: 55%;
+        position: absolute;
+        right: 0;
+        box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.1);
+      }
+      .testi-content h5 {
+        color: var(--primary-red);
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+      }
+      .testi-content h2 {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+      }
+      .client-info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+      }
+      .client-info img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        margin-right: 15px;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+      }
+      .client-info h6 {
+        margin: 0;
+        font-size: 16px;
+      }
+      .client-info p {
+        margin: 0;
+        font-size: 12px;
+        color: #aaa;
+      }
+      .quote-text {
+        font-style: italic;
+        color: #ccc;
+        line-height: 1.8;
+        border-left: 3px solid var(--primary-red);
+        padding-left: 20px;
+        position: relative;
+      }
+      .quote-icon {
+        position: absolute;
+        right: 20px;
+        bottom: -20px;
+        font-size: 80px;
+        color: rgba(255, 255, 255, 0.05);
+        line-height: 1;
+      }
+
+      /* --- Clients Section --- */
+      .clients-section {
+        padding: 80px 0;
+        background-color: white;
+        text-align: center;
+      }
+      .clients-section .section-title {
+        margin-bottom: 40px;
+      }
+      .clients-section .section-title span {
+        color: var(--primary-red);
+      }
+      .clients-section .section-title::after {
+        content: "﹋﹋﹋";
+        display: block;
+        color: #ccc;
+        font-size: 20px;
+        letter-spacing: 5px;
+        margin-top: 10px;
+      }
+      .clientsSwiper {
+        width: 100%;
+        padding: 20px 0;
+      }
+      .swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .client-logo img {
+        max-width: 150px;
+        max-height: 80px;
+        object-fit: contain;
+        opacity: 0.6;
+        transition: 0.3s;
+        cursor: grab;
+        filter: grayscale(100%);
+      }
+      .client-logo img:active {
+        cursor: grabbing;
+      }
+      .client-logo img:hover {
+        opacity: 1;
+        filter: grayscale(0%);
+        transform: scale(1.1);
+      }
+
+      /* --- Footer --- */
+      .footer {
+        background-color: var(--darker-bg);
+        color: #aaa;
+        padding: 80px 0 30px;
+      }
+      .footer h4 {
+        color: white;
+        font-size: 1.2rem;
+        margin-bottom: 25px;
+        position: relative;
+      }
+      .footer-contact li {
+        margin-bottom: 15px;
+        display: flex;
+      }
+      .footer-contact i {
+        color: var(--primary-red);
+        margin-right: 15px;
+        margin-top: 5px;
+      }
+      .footer-links {
+        list-style: none;
+        padding: 0;
+      }
+      .footer-links li {
+        margin-bottom: 12px;
+      }
+      .footer-links a {
+        color: #aaa;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+      .footer-links a:hover {
+        color: var(--primary-red);
+        padding-left: 5px;
+      }
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        margin-top: 50px;
+        padding-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 13px;
+      }
+      .footer-bottom img {
+        max-width: 100px;
+      }
+      .footer-social a {
+        color: #aaa;
+        margin-left: 15px;
+        transition: 0.3s;
+      }
+      .footer-social a:hover {
+        color: white;
+      }
+
+      .scroll-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: var(--primary-red);
+        color: white;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        text-decoration: none;
+        opacity: 0;
+        transition: 0.3s;
+        z-index: 999;
+      }
+      .scroll-top.show {
+        opacity: 1;
+      }
+      .scroll-top:hover {
+        background: var(--dark-bg);
+        color: white;
+      }
+
+      /* Responsive Fixes */
+      @media (max-width: 991px) {
+        .testi-wrapper {
+          flex-direction: column;
+        }
+        .testi-img,
+        .testi-content {
+          width: 100%;
+          position: relative;
+        }
+        .testi-img img {
+          height: 300px;
+        }
+        .testi-content {
+          padding: 40px;
+        }
+        .hero-content h1 {
+          font-size: 2.5rem;
+        }
+      }
+    </style> -->
+  </head>
+  <body>
+    <!-- Top Bar -->
+    <!-- <div class="top-bar d-none d-lg-block">
+      <div class="container d-flex justify-content-between align-items-center">
+        <div class="contact-info">
+          <i class="fas fa-map-marker-alt"></i> 14 Mohamed Mandour St. Nasr City
+          - Cairo
+        </div>
+        <div class="d-flex align-items-center">
+          <span
+            ><i class="fas fa-envelope"></i> Email :
+            info@araborganizers.org</span
+          >
+          <span class="mx-3">|</span>
+          <a href="#">FAQ <i class="fas fa-caret-right"></i></a>
+          <div class="social-icons ml-4">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <!-- Placeholder for Logo -->
+          <img
+            src="assets/logo xanadu.png"
+            alt="Arab Organizers Logo"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <!-- <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li> -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                >Conferences</a
+              >
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="conferences.html">Upcoming</a></li>
+                <li><a class="dropdown-item" href="#">Past</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="FAQ.html">FAQ</a></li>
+            <!-- <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                >News Letter</a
+              >
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="media-corner.html">Media Corner</a>
+            </li>
+          </ul>
+          <!-- <button class="search-btn"><i class="fas fa-search"></i></button> -->
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <!-- Swiper Container for Hero -->
+      <div class="swiper heroSwiper">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 (متطابق مع الفيديو) -->
+          <div class="swiper-slide">
+            <div
+              class="hero-bg"
+              style="
+                background-image: url(&quot;https://images.unsplash.com/photo-1551076805-e1869033e561?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80&quot;);
+              "
+            ></div>
+            <div class="hero-overlay"></div>
+            <div class="container hero-content text-center">
+              <h1 class="text-uppercase mb-3">The Conference Organizers</h1>
+              <div
+                class="subtitle-list mb-4 fs-5 d-flex justify-content-center flex-wrap gap-3"
+              >
+                <span>Conferences</span>
+                <span class="text-white-50">|</span>
+                <span>Organizations</span>
+                <span class="text-white-50">|</span>
+                <span>Medical Colleges</span>
+                <span class="text-white-50">|</span>
+                <span>Webinars</span>
+              </div>
+              <p class="lead mb-4 fw-light">
+                23 Years of Planning Large Successful Events for more than 50
+                Companies throughout the Middle East & South Africa
+              </p>
+              <div class="mt-4 btn-wrap">
+                <a href="#" class="btn btn-custom"
+                  >Contact Us <i class="fas fa-chevron-right ms-2"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 (متطابق مع الفيديو) -->
+          <div class="swiper-slide">
+            <div
+              class="hero-bg"
+              style="
+                background-image: url(&quot;https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80&quot;);
+              "
+            ></div>
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+              <h1 class="mb-3">
+                We <span style="color: var(--primary-gold)">Plan</span> Your
+                <br /><span style="color: var(--primary-gold)">Event</span>
+                From<br />Start to Finish.
+              </h1>
+              <p class="lead mb-4 fw-light">
+                23 Years of Planning Large Successful Events for more than 50
+                Companies throughout the Middle East & South Africa
+              </p>
+              <div class="mt-4 btn-wrap">
+                <a href="#" class="btn btn-custom"
+                  >Contact us <i class="fas fa-chevron-right ms-2"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 (متطابق مع الفيديو) -->
+          <div class="swiper-slide">
+            <div
+              class="hero-bg"
+              style="
+                background-image: url(&quot;https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80&quot;);
+              "
+            ></div>
+            <div class="hero-overlay"></div>
+            <div class="container hero-content text-center">
+              <h1 class="text-uppercase mb-3">
+                Meeting, Event and Conference<br />Organization
+              </h1>
+              <p class="lead mb-4 fw-light">
+                23 Years of Planning Large Successful Events for more than 50
+                Companies throughout the Middle East & South Africa
+              </p>
+              <div class="mt-4 btn-wrap">
+                <a href="#" class="btn btn-custom me-3"
+                  >Contact us <i class="fas fa-chevron-right ms-2"></i
+                ></a>
+                <a href="#" class="btn btn-outline-custom">About Us</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Swiper Navigation Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+            <div class="about-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1515169067868-5387ec356754?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Event Image 1"
+                class="img-1"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Event Image 2"
+                class="img-2"
+              />
+            </div>
+          </div>
+          <div class="col-lg-6 ps-lg-5" data-aos="fade-left">
+            <h2 class="section-title">About Arab Organizers</h2>
+            <p class="about-text fw-medium text-dark">
+              With our passion, knowledge, creative flair and inspiration, we
+              are dedicated in helping you to achieve your dream coordinating
+              your special event within your budget.
+            </p>
+            <p class="about-text pb-4 border-bottom">
+              Our plans and events coordination services are designed for Any
+              Sized budget, meaning anyone. Our teams and our awesome services
+              will satisfy all your needs.
+            </p>
+
+            <div class="row counter-box">
+              <div class="col-4">
+                <div class="counter-num" data-target="956">0</div>
+                <div class="counter-text">Conferences</div>
+              </div>
+              <div class="col-4">
+                <div class="counter-num" data-target="36478">0</div>
+                <div class="counter-text">Attendees</div>
+              </div>
+              <div class="col-4">
+                <div class="counter-num" data-target="64">0</div>
+                <div class="counter-text">Clients</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">
+          We Provide Best <span style="color: var(--primary-gold)">Services</span>
+        </h2>
+        <div class="row g-0 mt-5">
+          <!-- Service 1 -->
+          <div
+            class="col-md-4 col-sm-6"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="service-box border-bottom border-end">
+              <i class="fas fa-map-marked-alt service-icon"></i>
+              <h4 class="serif-font">Venue Booking</h4>
+              <p>
+                We choose and book the best avenue according to the events
+                properties and requirements anywhere around Egypt.
+              </p>
+            </div>
+          </div>
+          <!-- Service 2 -->
+          <div
+            class="col-md-4 col-sm-6"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="service-box border-bottom border-end">
+              <i class="fas fa-user-tie service-icon"></i>
+              <h4 class="serif-font">Speakers and VIP arrangement</h4>
+              <p>
+                We make the best plan for speakers so as to gain the most
+                benefit from the program.
+              </p>
+            </div>
+          </div>
+          <!-- Service 3 -->
+          <div
+            class="col-md-4 col-sm-6"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="service-box border-bottom">
+              <i class="fas fa-camera-retro service-icon"></i>
+              <h4 class="serif-font">Photos and documentation</h4>
+              <p>
+                Every special moment will be documented by professional
+                photographers.
+              </p>
+            </div>
+          </div>
+          <!-- Service 4 -->
+          <div
+            class="col-md-4 col-sm-6"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="service-box border-end">
+              <i class="fas fa-file-invoice-dollar service-icon"></i>
+              <h4 class="serif-font">Financial Management</h4>
+              <p>
+                You can trust our ability to keep your event under budget all
+                the time to achieve the highest profit...
+              </p>
+            </div>
+          </div>
+          <!-- Service 5 -->
+          <div
+            class="col-md-4 col-sm-6"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
+            <div class="service-box border-end">
+              <i class="fas fa-laptop-code service-icon"></i>
+              <h4 class="serif-font">Web-site and applications design</h4>
+              <p>
+                Your audience will be able to keep in touch with your conference
+                and receive all photos, certificate, and whatever you want at
+                any time.
+              </p>
+            </div>
+          </div>
+          <!-- Service 6 -->
+          <div
+            class="col-md-4 col-sm-6"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
+            <div class="service-box">
+              <i class="fas fa-bullhorn service-icon"></i>
+              <h4 class="serif-font">Marketing and social media</h4>
+              <p>
+                You can guarantee that you will reach your audience by our
+                campaigns on social media channels and our offline campaigns
+                too.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="events-section">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">
+          Our <span>Events</span>
+        </h2>
+
+        <div class="row g-4 mt-4">
+          <!-- Event 1 -->
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="card event-card">
+              <img
+                src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                class="card-img-top"
+                alt="Event"
+              />
+              <div class="card-body">
+                <div class="d-flex mb-3">
+                  <div class="event-date">14<span>May</span></div>
+                  <div>
+                    <h5 class="event-title">
+                      11th Annual Conference Medical...
+                    </h5>
+                  </div>
+                </div>
+                <p class="event-desc">
+                  11th Annual Conference Medical Oncology Department Zagazig
+                  Updates in Cancer treatment
+                </p>
+                <div class="event-location">
+                  <i class="fas fa-map-marker-alt"></i> First Day Zagazig
+                  University Second Day Tolip el narges
+                </div>
+                <a href="#" class="btn-read-more">Read More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 2 -->
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="card event-card">
+              <img
+                src="https://images.unsplash.com/photo-1542621334-a254cf47733d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                class="card-img-top"
+                alt="Event"
+              />
+              <div class="card-body">
+                <div class="d-flex mb-3">
+                  <div class="event-date">19<span>May</span></div>
+                  <div>
+                    <h5 class="event-title">
+                      PHARMACIST POLICE CONFERENCE (...
+                    </h5>
+                  </div>
+                </div>
+                <p class="event-desc">
+                  PHARMACIST POLICE CONFERENCE (PPC) & Workshop Registration
+                  Click Here
+                </p>
+                <div class="event-location">
+                  <i class="fas fa-map-marker-alt"></i> Marriott el zamalek
+                </div>
+                <a href="#" class="btn-read-more">Read More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 3 -->
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="card event-card">
+              <img
+                src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                class="card-img-top"
+                alt="Event"
+              />
+              <div class="card-body">
+                <div class="d-flex mb-3">
+                  <div class="event-date">03<span>Jun</span></div>
+                  <div>
+                    <h5 class="event-title">
+                      the 14th international ESHA Co...
+                    </h5>
+                  </div>
+                </div>
+                <p class="event-desc">Hilton Cairo Heliopolis</p>
+                <div class="event-location">
+                  <i class="fas fa-map-marker-alt"></i> hilton cairo heliopolis
+                </div>
+                <a href="#" class="btn-read-more mt-4 d-inline-block"
+                  >Read More</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="testimonial-section">
+      <div class="container">
+        <div class="testi-wrapper">
+          <div class="testi-img" data-aos="fade-right">
+            <img
+              src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+              alt="Concert/Event"
+            />
+          </div>
+          <div class="testi-content" data-aos="fade-left">
+            <h5>Testimonal</h5>
+            <h2>Clients feedback</h2>
+
+            <div class="client-info mt-4">
+              <img
+                src="https://randomuser.me/api/portraits/men/32.jpg"
+                alt="Prof. Samir Shehata"
+              />
+              <div>
+                <h6>Prof. Samir Shehata</h6>
+                <p>
+                  Head, Department of Clinical Oncology and Nuclear Medicine,
+                  Assiut University
+                </p>
+              </div>
+            </div>
+
+            <p class="quote-text">
+              It gives me great pleasure to recall my professional association
+              with Mr. Ibrahim Farouk in ArabOrganizers professional meetings,
+              symposiums and congresses over the past 18 years.
+            </p>
+            <i class="fas fa-quote-right quote-icon"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="clients-section">
+      <div class="container">
+        <h2 class="section-title serif-font" data-aos="zoom-in">
+          Our <span>Clients</span>
+        </h2>
+
+        <!-- Swiper Container for Clients -->
+        <div
+          class="swiper clientsSwiper mt-5"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <div class="swiper-wrapper">
+            <div class="swiper-slide client-logo">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Sanofi-Aventis_logo.svg/2560px-Sanofi-Aventis_logo.svg.png"
+                alt="Sanofi"
+              />
+            </div>
+            <div class="swiper-slide client-logo">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/AstraZeneca_logo.svg/2560px-AstraZeneca_logo.svg.png"
+                alt="AstraZeneca"
+              />
+            </div>
+            <div class="swiper-slide client-logo">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Bayer_logo.svg/2048px-Bayer_logo.svg.png"
+                alt="Bayer"
+              />
+            </div>
+            <div class="swiper-slide client-logo">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Bristol-Myers_Squibb_logo_%282020%29.svg/2560px-Bristol-Myers_Squibb_logo_%282020%29.svg.png"
+                alt="BMS"
+              />
+            </div>
+            <div class="swiper-slide client-logo">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/cc/Novartis_logo.svg/2560px-Novartis_logo.svg.png"
+                alt="Novartis"
+              />
+            </div>
+            <div class="swiper-slide client-logo">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Pfizer_%282021%29.svg/2560px-Pfizer_%282021%29.svg.png"
+                alt="Pfizer"
+              />
+            </div>
+            <div class="swiper-slide client-logo">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Hoffmann-La_Roche_logo.svg/2560px-Hoffmann-La_Roche_logo.svg.png"
+                alt="Roche"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <h4>Contact Us</h4>
+            <ul class="footer-links footer-contact">
+              <li>
+                <i class="fas fa-map-marker-alt"></i> 14 Mohamed Mandour St.
+                Nasr City - Cairo
+              </li>
+              <li><i class="fas fa-envelope"></i> info@araborganizers.org</li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <h4>Our Services</h4>
+            <ul class="footer-links">
+              <li><a href="#">Our Gallery</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Latest News</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-12 mb-4">
+            <h4>Frequent Questions</h4>
+            <ul class="footer-links">
+              <li><a href="#">How Can I Set An Event?</a></li>
+              <li><a href="#">What Venues Do You Use?</a></li>
+              <li><a href="#">I have many questions, what to do?</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="d-flex align-items-center">
+            <img
+              src="assets/logo xanadu.png"
+              alt="Logo"
+              class="me-3"
+            />
+            <p
+              class="mb-0"
+              style="max-width: 400px; font-size: 11px"
+            >
+              Arab Organizers is full service provider rooted in the meetings
+              management. We have long-term experience in organizing all types
+              of conferences.
+            </p>
+          </div>
+          <div>
+            <div class="footer-social text-end mb-2">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p class="mb-0 text-muted">
+              © 2026 Arab Organizers. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <a href="#" class="scroll-top" id="scrollTop">
+      <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- ========================================== -->
+    <!-- بداية ملف الـ JS (يمكنك نقله لملف main.js) -->
+    <script src="main.js"></script>
+    <!-- ========================================== -->
+    <!-- <script>
+      // 1. Initialize AOS Animations
+      AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100,
+      });
+
+      // 2. Animated Number Counters
+      const counters = document.querySelectorAll(".counter-num");
+      const speed = 200;
+
+      const startCounters = () => {
+        counters.forEach((counter) => {
+          const updateCount = () => {
+            const target = +counter.getAttribute("data-target");
+            const count = +counter.innerText;
+            const inc = target / speed;
+
+            if (count < target) {
+              counter.innerText = Math.ceil(count + inc);
+              setTimeout(updateCount, 10);
+            } else {
+              counter.innerText = target;
+            }
+          };
+          updateCount();
+        });
+      };
+
+      const observer = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              startCounters();
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.5 },
+      );
+
+      const counterSection = document.querySelector(".counter-box");
+      if (counterSection) {
+        observer.observe(counterSection);
+      }
+
+      // 3. Scroll to Top Button
+      const scrollTopBtn = document.getElementById("scrollTop");
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 300) {
+          scrollTopBtn.classList.add("show");
+        } else {
+          scrollTopBtn.classList.remove("show");
+        }
+      });
+
+      scrollTopBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      // 4. Initialize Swiper for Hero Section (بناءً على طلبك ومطابق للفيديو)
+      new Swiper(".heroSwiper", {
+        loop: true, // تكرار لا نهائي
+        grabCursor: true, // يظهر مؤشر السحب باليد
+        speed: 1000, // سرعة حركة الشريحة
+        autoplay: {
+          delay: 6000, // التحول التلقائي كل 6 ثوانٍ ليتناسب مع وقت الانيميشن
+          disableOnInteraction: false, // الاستمرار في اللف حتى بعد سحب المستخدم
+        },
+        navigation: {
+          nextEl: ".heroSwiper .swiper-button-next",
+          prevEl: ".heroSwiper .swiper-button-prev",
+        },
+      });
+
+      // 5. Initialize Swiper for Clients Section
+      new Swiper(".clientsSwiper", {
+        slidesPerView: 2,
+        spaceBetween: 30,
+        loop: true,
+        grabCursor: true,
+        autoplay: {
+          delay: 2000,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+          576: { slidesPerView: 3, spaceBetween: 40 },
+          768: { slidesPerView: 4, spaceBetween: 40 },
+          992: { slidesPerView: 5, spaceBetween: 50 },
+        },
+      });
+    </script> -->
+  </body>
+</html>

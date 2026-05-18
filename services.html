@@ -1,0 +1,976 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services - Arab Organizers</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <!-- <style>
+      /* ========================================== */
+      /* Core Variables matching style.css */
+      /* ========================================== */
+      :root {
+        --primary-red: #d32f2f;
+        --primary-red-hover: #b71c1c;
+        --dark-bg: #120923;
+        --darker-bg: #0a0414;
+        --text-gray: #6c757d;
+        --primary-beige: #f9e49e;
+        --primary-gold: #e2af64;
+        --primary-navy: #1a203c;
+        --primary-white: #ffffff;
+      }
+
+      html,
+      body {
+        overflow-x: clip;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        font-family: "Poppins", sans-serif;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      .serif-font {
+        font-family: "Playfair Display", serif;
+      }
+
+      /* --- Top Bar (From Video) --- */
+      .top-bar {
+        background-color: var(--primary-red);
+        font-size: 13px;
+        padding: 8px 0;
+        color: white;
+      }
+      .top-bar a {
+        color: white;
+        text-decoration: none;
+        margin-left: 10px;
+        transition: 0.3s;
+      }
+      .top-bar a:hover {
+        color: #f8f9fa;
+        opacity: 0.8;
+      }
+      .social-icons a {
+        margin-left: 15px;
+        font-size: 14px;
+      }
+
+      /* --- Navbar (Matching index.html) --- */
+      .navbar {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        padding: 15px 0;
+        background: var(--primary-navy);
+        transition: all 0.3s ease;
+      }
+      .navbar-brand img {
+        max-height: 50px;
+      }
+      .nav-link {
+        font-weight: 600;
+        font-size: 14px;
+        color: var(--primary-white) !important;
+        margin: 0 10px;
+        text-transform: capitalize;
+        transition: 0.3s;
+      }
+      .nav-link:hover,
+      .nav-link.active {
+        color: var(--primary-gold) !important;
+      }
+      .navbar-toggler {
+        border: 2px solid var(--primary-gold) !important;
+        outline: none !important;
+      }
+      .navbar-toggler .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(226,175,100)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      }
+
+      /* --- Page Header Banner --- */
+      .page-header {
+        position: relative;
+        height: 45vh;
+        min-height: 350px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+      .page-header .bg-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        z-index: 0;
+      }
+      .page-header .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(
+          18,
+          9,
+          35,
+          0.85
+        ); /* Darker overlay for text readability */
+        z-index: 1;
+      }
+      .page-header .content {
+        z-index: 2;
+      }
+      .page-header h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+      }
+      .page-header p {
+        color: var(--primary-gold);
+        font-style: italic;
+      }
+      .breadcrumbs {
+        margin-top: 20px;
+        background: rgba(255, 255, 255, 0.1);
+        display: inline-block;
+        padding: 8px 25px;
+        border-radius: 30px;
+        font-size: 14px;
+      }
+      .breadcrumbs span {
+        color: var(--primary-gold);
+      }
+
+      /* --- Intro Section --- */
+      .intro-services {
+        padding: 70px 0;
+        background-color: #fcfcfc;
+      }
+      .intro-services h2 {
+        color: var(--primary-navy);
+        font-size: 2.2rem;
+        margin-bottom: 15px;
+      }
+      .phone-icon-animated {
+        display: inline-block;
+        animation: ringPhone 2s infinite ease-in-out;
+        color: var(--primary-red);
+      }
+
+      @keyframes ringPhone {
+        0%,
+        100% {
+          transform: rotate(0);
+        }
+        10%,
+        30%,
+        50%,
+        70%,
+        90% {
+          transform: rotate(-10deg);
+        }
+        20%,
+        40%,
+        60%,
+        80% {
+          transform: rotate(10deg);
+        }
+      }
+
+      /* --- Full Services Grid Section --- */
+      .services-grid-section {
+        background-color: var(--dark-bg);
+        padding: 100px 0;
+        color: white;
+      }
+      .services-grid-section .section-title {
+        color: white;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .title-underline {
+        width: 150px;
+        height: 3px;
+        background: var(--primary-gold);
+        margin: 0 auto 60px auto;
+        position: relative;
+      }
+      .title-underline::before {
+        content: "";
+        position: absolute;
+        top: -4px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 12px;
+        height: 12px;
+        background: var(--primary-red);
+        border-radius: 50%;
+      }
+
+      .service-item-box {
+        padding: 45px 25px;
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        transition: all 0.4s ease;
+        height: 100%;
+        background: transparent;
+        position: relative;
+        overflow: hidden;
+      }
+      .service-item-box::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: rgba(226, 175, 100, 0.03); /* slight gold tint on hover */
+        transition: all 0.4s ease;
+        z-index: 0;
+      }
+      .service-item-box:hover::before {
+        height: 100%;
+      }
+      .service-item-box:hover {
+        transform: translateY(-8px);
+        border-color: var(--primary-gold);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      }
+      .service-icon-wrapper {
+        position: relative;
+        z-index: 1;
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 15px; /* Square with rounded corners like video */
+        transform: rotate(45deg);
+        transition: all 0.4s ease;
+      }
+      .service-item-box:hover .service-icon-wrapper {
+        border-color: var(--primary-gold);
+        background: var(--primary-gold);
+      }
+      .service-icon {
+        font-size: 30px;
+        color: white;
+        transform: rotate(-45deg);
+        transition: color 0.3s;
+      }
+      .service-item-box:hover .service-icon {
+        color: var(--primary-navy);
+      }
+      .service-item-box h4 {
+        font-size: 1.25rem;
+        margin-bottom: 15px;
+        position: relative;
+        z-index: 1;
+      }
+      .service-item-box p {
+        color: #aaa;
+        font-size: 14px;
+        line-height: 1.8;
+        position: relative;
+        z-index: 1;
+      }
+
+      /* Border Fixes for Grid visually connecting */
+      @media (min-width: 992px) {
+        .grid-col:nth-child(3n + 1) .service-item-box,
+        .grid-col:nth-child(3n + 2) .service-item-box {
+          border-right: none;
+        }
+        .grid-col:not(:nth-last-child(-n + 3)) .service-item-box {
+          border-bottom: none;
+        }
+      }
+      @media (min-width: 768px) and (max-width: 991px) {
+        .grid-col:nth-child(odd) .service-item-box {
+          border-right: none;
+        }
+        .grid-col:not(:nth-last-child(-n + 2)) .service-item-box {
+          border-bottom: none;
+        }
+      }
+
+      /* --- Footer (Matching index.html) --- */
+      .footer {
+        background-color: var(--primary-navy);
+        color: #aaa;
+        padding: 80px 0 30px;
+        overflow: hidden;
+      }
+      .footer h4 {
+        color: white;
+        font-size: 1.2rem;
+        margin-bottom: 25px;
+        position: relative;
+      }
+      .footer-contact li {
+        margin-bottom: 15px;
+        display: flex;
+        word-break: break-word;
+      }
+      .footer-contact i {
+        color: var(--primary-gold);
+        margin-right: 15px;
+        margin-top: 5px;
+      }
+      .footer-links {
+        list-style: none;
+        padding: 0;
+      }
+      .footer-links li {
+        margin-bottom: 12px;
+      }
+      .footer-links a {
+        color: #aaa;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+      .footer-links a:hover {
+        color: var(--primary-gold);
+        padding-left: 5px;
+      }
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        margin-top: 50px;
+        padding-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 13px;
+        gap: 20px;
+      }
+      .footer-social a {
+        color: #aaa;
+        margin-left: 15px;
+        transition: 0.3s;
+        display: inline-block;
+      }
+      .footer-social a:hover {
+        color: var(--primary-gold);
+      }
+
+      .scroll-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: var(--primary-gold);
+        color: white;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        text-decoration: none;
+        opacity: 0;
+        transition: 0.3s;
+        z-index: 999;
+      }
+      .scroll-top.show {
+        opacity: 1;
+      }
+      .scroll-top:hover {
+        color: var(--primary-navy);
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 767px) {
+        .page-header h1 {
+          font-size: 2.2rem;
+        }
+        .page-header p {
+          font-size: 1.2rem !important;
+        }
+        .footer-bottom {
+          flex-direction: column;
+          text-align: center;
+        }
+        .footer-bottom .d-flex {
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+    </style> -->
+  </head>
+  <body>
+    <!-- Top Bar -->
+    <!-- <div class="top-bar d-none d-lg-block">
+      <div class="container d-flex justify-content-between align-items-center">
+        <div class="contact-info">
+          <i class="fas fa-map-marker-alt text-white"></i> 14 Mohamed Mandour
+          St. Nasr City - Cairo
+        </div>
+        <div class="d-flex align-items-center">
+          <span
+            ><i class="fas fa-envelope text-white"></i> Email :
+            info@araborganizers.org</span
+          >
+          <span class="mx-3">|</span>
+          <a href="#">FAQ <i class="fas fa-caret-right"></i></a>
+          <div class="social-icons ml-4">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <!-- Placeholder for Logo -->
+          <img src="assets/logo xanadu.png" alt="Arab Organizers Logo" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li> -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                >Conferences</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="conferences.html">Upcoming</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Past</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="FAQ.html">FAQ</a>
+            </li>
+            <!-- <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                >News Letter</a
+              >
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="media-corner.html">Media Corner</a>
+            </li>
+          </ul>
+          <!-- <button class="search-btn"><i class="fas fa-search"></i></button> -->
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header (Hero) -->
+    <div class="page-header">
+      <div class="bg-img"></div>
+      <div class="overlay"></div>
+      <div class="content text-center text-white w-100 px-3">
+        <h1
+          class="text-uppercase mb-3"
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+        >
+          Our Great Services
+        </h1>
+        <p class="fs-4 mb-0" data-aos="fade-up" data-aos-delay="200">
+          We Are Here, Do You Want Conference Organizers?
+        </p>
+        <div class="breadcrumbs" data-aos="fade-up" data-aos-delay="400">
+          <i class="fas fa-home"></i> Home <span class="mx-2">/</span>
+          <span>Services</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Intro Text Section -->
+    <section class="intro-services text-center">
+      <div class="container">
+        <h2 class="serif-font" data-aos="fade-up">
+          We'll Make Your Next Event Very Special!
+        </h2>
+        <p class="text-muted fs-5" data-aos="fade-up" data-aos-delay="100">
+          Friendly customer service staff for all your questions!
+        </p>
+        <i
+          class="fas fa-phone-alt fs-1 mt-4 phone-icon-animated"
+          data-aos="zoom-in"
+          data-aos-delay="200"
+        ></i>
+      </div>
+    </section>
+
+    <!-- Full Services Grid -->
+    <section class="services-grid-section">
+      <div class="container">
+        <h2 class="section-title serif-font" data-aos="fade-up">
+          We Provide Best Services
+        </h2>
+        <div
+          class="title-underline"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        ></div>
+
+        <div class="row g-0">
+          <!-- Service 1 -->
+          <div
+            class="col-lg-4 col-md-6 grid-col"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="service-item-box">
+              <div class="service-icon-wrapper">
+                <i class="fas fa-map-marked-alt service-icon"></i>
+              </div>
+              <h4 class="serif-font">Venue Booking</h4>
+              <p>
+                We choose and book the best avenue according to the events
+                properties and requirements anywhere around Egypt.
+              </p>
+            </div>
+          </div>
+          <!-- Service 2 -->
+          <div
+            class="col-lg-4 col-md-6 grid-col"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="service-item-box">
+              <div class="service-icon-wrapper">
+                <i class="fas fa-plane-departure service-icon"></i>
+              </div>
+              <h4 class="serif-font">Rooms and flights booking</h4>
+              <p>
+                We offer your guests the highest level of comfort and luxury
+                along their trip.
+              </p>
+            </div>
+          </div>
+          <!-- Service 3 -->
+          <div
+            class="col-lg-4 col-md-6 grid-col"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="service-item-box">
+              <div class="service-icon-wrapper">
+                <i class="fas fa-file-invoice-dollar service-icon"></i>
+              </div>
+              <h4 class="serif-font">Financial Management</h4>
+              <p>
+                You can trust our ability to keep your event under budget all
+                the time to achieve the highest profit.
+              </p>
+            </div>
+          </div>
+          <!-- Service 4 -->
+          <div
+            class="col-lg-4 col-md-6 grid-col"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="service-item-box">
+              <div class="service-icon-wrapper">
+                <i class="fas fa-camera-retro service-icon"></i>
+              </div>
+              <h4 class="serif-font">Photography and documentation</h4>
+              <p>
+                Every special moment will be documented by professional
+                photographers.
+              </p>
+            </div>
+          </div>
+          <!-- Service 5 -->
+          <div
+            class="col-lg-4 col-md-6 grid-col"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="service-item-box">
+              <div class="service-icon-wrapper">
+                <i class="fas fa-handshake service-icon"></i>
+              </div>
+              <h4 class="serif-font">Fundraising and sponsorship</h4>
+              <p>
+                We offer your event a bundle of sponsors and partners to achieve
+                the highest profit and more relations.
+              </p>
+            </div>
+          </div>
+          <!-- Service 6 -->
+          <div
+            class="col-lg-4 col-md-6 grid-col"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="service-item-box">
+              <div class="service-icon-wrapper">
+                <i class="fas fa-user-tie service-icon"></i>
+              </div>
+              <h4 class="serif-font">Speakers and VIP arrangement</h4>
+              <p>
+                We make the best plan for speakers so as to gain the most
+                benefit from the program.
+              </p>
+            </div>
+          </div>
+          <!-- Service 7 -->
+          <div
+            class="col-lg-4 col-md-6 grid-col"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="service-item-box">
+              <div class="service-icon-wrapper">
+                <i class="fas fa-database service-icon"></i>
+              </div>
+              <h4 class="serif-font">Online registrations and database</h4>
+              <p>
+                As we always keen on achieving the highest level of luxury and
+                accuracy we use new techniques in the registration.
+              </p>
+            </div>
+          </div>
+          <!-- Service 8 -->
+          <div
+            class="col-lg-4 col-md-6 grid-col"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="service-item-box">
+              <div class="service-icon-wrapper">
+                <i class="fas fa-bullhorn service-icon"></i>
+              </div>
+              <h4 class="serif-font">Marketing and social media</h4>
+              <p>
+                You can guarantee that you will reach your audience by our
+                campaigns on social media channels and offline too.
+              </p>
+            </div>
+          </div>
+          <!-- Service 9 -->
+          <div
+            class="col-lg-4 col-md-6 grid-col"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="service-item-box">
+              <div class="service-icon-wrapper">
+                <i class="fas fa-print service-icon"></i>
+              </div>
+              <h4 class="serif-font">Printings</h4>
+              <p>
+                We supply your event by all the printings needed to increase the
+                quality of your event.
+              </p>
+            </div>
+          </div>
+          <!-- Service 10 -->
+          <div
+            class="col-lg-4 col-md-6 grid-col"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="service-item-box">
+              <div class="service-icon-wrapper">
+                <i class="fas fa-headphones service-icon"></i>
+              </div>
+              <h4 class="serif-font">Audio-visual supplies</h4>
+              <p>
+                We supply your event by all the needed sound and light systems.
+              </p>
+            </div>
+          </div>
+          <!-- Service 11 -->
+          <div
+            class="col-lg-4 col-md-6 grid-col"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="service-item-box">
+              <div class="service-icon-wrapper">
+                <i class="fas fa-users service-icon"></i>
+              </div>
+              <h4 class="serif-font">Meet and assist</h4>
+              <p>
+                Your guests will enjoy the highest level of service with our
+                meet and assist team.
+              </p>
+            </div>
+          </div>
+          <!-- Service 12 -->
+          <div
+            class="col-lg-4 col-md-6 grid-col"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="service-item-box">
+              <div class="service-icon-wrapper">
+                <i class="fas fa-bus service-icon"></i>
+              </div>
+              <h4 class="serif-font">Transportation</h4>
+              <p>
+                Leave us have the mission of transporting your guests with our
+                comfy variable vehicles.
+              </p>
+            </div>
+          </div>
+          <!-- Service 13 -->
+          <div
+            class="col-lg-4 col-md-6 grid-col"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="service-item-box">
+              <div class="service-icon-wrapper">
+                <i class="fas fa-gift service-icon"></i>
+              </div>
+              <h4 class="serif-font">Giveaways</h4>
+              <p>
+                We care about the packaging of the giveaways in the most elegant
+                and classy way that would make you proud.
+              </p>
+            </div>
+          </div>
+          <!-- Service 14 -->
+          <div
+            class="col-lg-4 col-md-6 grid-col"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="service-item-box">
+              <div class="service-icon-wrapper">
+                <i class="fas fa-magic service-icon"></i>
+              </div>
+              <h4 class="serif-font">Decoration</h4>
+              <p>
+                Our event management team are experts in creating the most
+                classy and elegant decoration for your conference.
+              </p>
+            </div>
+          </div>
+          <!-- Service 15 -->
+          <div
+            class="col-lg-4 col-md-6 grid-col"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="service-item-box">
+              <div class="service-icon-wrapper">
+                <i class="fas fa-utensils service-icon"></i>
+              </div>
+              <h4 class="serif-font">Food and beverage</h4>
+              <p>
+                You should never be worry about the catering as we choose for
+                your guests the best catering plan.
+              </p>
+            </div>
+          </div>
+          <!-- Service 16 -->
+          <div
+            class="col-lg-4 col-md-6 grid-col"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="service-item-box">
+              <div class="service-icon-wrapper">
+                <i class="fas fa-music service-icon"></i>
+              </div>
+              <h4 class="serif-font">Entertainment programs</h4>
+              <p>
+                You just have to dream about the entertainment program you want
+                for your guests.
+              </p>
+            </div>
+          </div>
+          <!-- Service 17 -->
+          <div
+            class="col-lg-4 col-md-6 grid-col"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="service-item-box">
+              <div class="service-icon-wrapper">
+                <i class="fas fa-laptop-code service-icon"></i>
+              </div>
+              <h4 class="serif-font">Web-site and applications</h4>
+              <p>
+                Your audience will be able to keep in touch with your conference
+                and receive all photos, certificates.
+              </p>
+            </div>
+          </div>
+          <!-- Service 18 -->
+          <div
+            class="col-lg-4 col-md-6 grid-col"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="service-item-box">
+              <div class="service-icon-wrapper">
+                <i class="fas fa-video service-icon"></i>
+              </div>
+              <h4 class="serif-font">Virtual conferences</h4>
+              <p>
+                Our new service will enable you to make your scientific
+                gathering from home with unlimited time.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <h4>Contact Us</h4>
+            <ul class="footer-links footer-contact">
+              <li>
+                <i class="fas fa-map-marker-alt"></i> 14 Mohamed Mandour St.
+                Nasr City - Cairo
+              </li>
+              <li><i class="fas fa-envelope"></i> info@araborganizers.org</li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <h4>Our Services</h4>
+            <ul class="footer-links">
+              <li><a href="#">Our Gallery</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Latest News</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-12 mb-4">
+            <h4>Frequent Questions</h4>
+            <ul class="footer-links">
+              <li><a href="#">How Can I Set An Event?</a></li>
+              <li><a href="#">What Venues Do You Use?</a></li>
+              <li><a href="#">I have many questions, what to do?</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="d-flex align-items-center">
+            <img src="assets/logo xanadu.png" alt="Logo" class="me-3" />
+            <p class="mb-0" style="max-width: 400px; font-size: 11px">
+              Arab Organizers is full service provider rooted in the meetings
+              management. We have long-term experience in organizing all types
+              of conferences.
+            </p>
+          </div>
+          <div>
+            <div class="footer-social text-end mb-2">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p class="mb-0 text-muted">
+              © 2026 Arab Organizers. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <a href="#" class="scroll-top" id="scrollTop">
+      <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- Bootstrap & Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      // 1. Initialize AOS Animations
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 80,
+      });
+
+      // 2. Scroll to Top Button Logic
+      const scrollTopBtn = document.getElementById("scrollTop");
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 300) {
+          scrollTopBtn.classList.add("show");
+        } else {
+          scrollTopBtn.classList.remove("show");
+        }
+      });
+
+      scrollTopBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    </script>
+  </body>
+</html>

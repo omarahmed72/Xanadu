@@ -1,0 +1,810 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ - Arab Organizers</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- <style>
+      /* ========================================== */
+      /* Core Variables matching style.css */
+      /* ========================================== */
+      :root {
+        --primary-red: #d32f2f;
+        --primary-red-hover: #b71c1c;
+        --dark-bg: #120923;
+        --darker-bg: #0a0414;
+        --text-gray: #6c757d;
+        --primary-beige: #f9e49e;
+        --primary-gold: #e2af64;
+        --primary-navy: #1a203c;
+        --primary-white: #ffffff;
+      }
+
+      html,
+      body {
+        overflow-x: clip;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        font-family: "Poppins", sans-serif;
+        background-color: #fafafa;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      .serif-font {
+        font-family: "Playfair Display", serif;
+      }
+
+      /* --- Top Bar --- */
+      .top-bar {
+        background-color: var(--primary-red);
+        font-size: 13px;
+        padding: 8px 0;
+        color: white;
+      }
+      .top-bar a {
+        color: white;
+        text-decoration: none;
+        margin-left: 10px;
+        transition: 0.3s;
+      }
+      .top-bar a:hover {
+        color: #f8f9fa;
+        opacity: 0.8;
+      }
+      .social-icons a {
+        margin-left: 15px;
+        font-size: 14px;
+      }
+
+      /* --- Navbar --- */
+      .navbar {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        padding: 15px 0;
+        background: var(--primary-navy);
+        transition: all 0.3s ease;
+      }
+      .navbar-brand img {
+        max-height: 50px;
+      }
+      .nav-link {
+        font-weight: 600;
+        font-size: 14px;
+        color: var(--primary-white) !important;
+        margin: 0 10px;
+        text-transform: capitalize;
+        transition: 0.3s;
+      }
+      .nav-link:hover {
+        color: var(--primary-gold) !important;
+      }
+      .navbar-toggler {
+        border: 2px solid var(--primary-gold) !important;
+        outline: none !important;
+      }
+      .navbar-toggler .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(226,175,100)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      }
+
+      /* --- Page Header Banner --- */
+      .page-header {
+        position: relative;
+        height: 45vh;
+        min-height: 350px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+      .page-header .bg-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        z-index: 0;
+      }
+      .page-header .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(18, 9, 35, 0.85);
+        z-index: 1;
+      }
+      .page-header .content {
+        z-index: 2;
+      }
+      .page-header h1 {
+        font-size: 4rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+      }
+      .page-header p {
+        color: var(--primary-white);
+        font-size: 1.3rem;
+      }
+      .breadcrumbs {
+        margin-top: 20px;
+        background: rgba(255, 255, 255, 0.1);
+        display: inline-block;
+        padding: 8px 25px;
+        border-radius: 30px;
+        font-size: 14px;
+      }
+      .breadcrumbs span {
+        color: var(--primary-gold);
+      }
+
+      /* --- FAQ Section --- */
+      .faq-section {
+        padding: 80px 0 100px;
+      }
+      .faq-container {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .accordion-item {
+        border: none;
+        margin-bottom: 20px;
+        border-radius: 10px !important;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+        overflow: hidden;
+        background-color: transparent;
+      }
+      .accordion-button {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        color: #333;
+        background-color: #fff;
+        padding: 20px 30px;
+        box-shadow: none !important;
+        border-radius: 10px !important;
+        transition: all 0.3s ease;
+      }
+
+      /* Hover State for Accordion Button */
+      .accordion-button:hover {
+        color: var(--primary-red);
+      }
+
+      /* Active State for Accordion Button */
+      .accordion-button:not(.collapsed) {
+        background-color: var(--primary-red);
+        color: #fff;
+        border-bottom-left-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+      }
+
+      /* Custom Plus/Minus Icon */
+      .accordion-button::after {
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        content: "\f067"; /* Plus icon */
+        background-image: none;
+        color: var(--primary-red);
+        font-size: 13px;
+        border: 1px solid rgba(211, 47, 47, 0.2);
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.4s ease;
+      }
+      .accordion-button:not(.collapsed)::after {
+        content: "\f068"; /* Minus icon */
+        color: var(--primary-red);
+        background-color: #fff;
+        background-image: none;
+        border-color: #fff;
+        transform: rotate(180deg);
+      }
+
+      /* Accordion Body Styling */
+      .accordion-body {
+        background-color: #fff;
+        padding: 30px;
+        color: #555;
+        font-size: 15px;
+        line-height: 1.8;
+        border-top: 1px solid #f1f1f1;
+      }
+      .accordion-body p {
+        margin-bottom: 15px;
+      }
+      .accordion-body p strong {
+        color: var(--primary-navy);
+        font-weight: 600;
+      }
+      .accordion-body p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* Custom Button in FAQ */
+      .btn-read-more-faq {
+        display: inline-block;
+        background-color: var(--primary-red);
+        color: white;
+        padding: 6px 20px;
+        border-radius: 4px;
+        font-size: 13px;
+        text-decoration: none;
+        transition: 0.3s;
+        margin-left: 10px;
+      }
+      .btn-read-more-faq:hover {
+        background-color: var(--primary-navy);
+        color: white;
+      }
+
+      /* --- Footer --- */
+      .footer {
+        background-color: var(--primary-navy);
+        color: #aaa;
+        padding: 80px 0 30px;
+        overflow: hidden;
+      }
+      .footer h4 {
+        color: white;
+        font-size: 1.2rem;
+        margin-bottom: 25px;
+        position: relative;
+      }
+      .footer-contact li {
+        margin-bottom: 15px;
+        display: flex;
+        word-break: break-word;
+      }
+      .footer-contact i {
+        color: var(--primary-gold);
+        margin-right: 15px;
+        margin-top: 5px;
+      }
+      .footer-links {
+        list-style: none;
+        padding: 0;
+      }
+      .footer-links li {
+        margin-bottom: 12px;
+      }
+      .footer-links a {
+        color: #aaa;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+      .footer-links a:hover {
+        color: var(--primary-gold);
+        padding-left: 5px;
+      }
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        margin-top: 50px;
+        padding-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 13px;
+        gap: 20px;
+      }
+      .footer-social a {
+        color: #aaa;
+        margin-left: 15px;
+        transition: 0.3s;
+        display: inline-block;
+      }
+      .footer-social a:hover {
+        color: var(--primary-gold);
+      }
+
+      .scroll-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: var(--primary-gold);
+        color: white;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        text-decoration: none;
+        opacity: 0;
+        transition: 0.3s;
+        z-index: 999;
+      }
+      .scroll-top.show {
+        opacity: 1;
+      }
+      .scroll-top:hover {
+        color: var(--primary-navy);
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 767px) {
+        .page-header h1 {
+          font-size: 2.5rem;
+        }
+        .page-header p {
+          font-size: 1.1rem;
+        }
+        .footer-bottom {
+          flex-direction: column;
+          text-align: center;
+        }
+        .footer-bottom .d-flex {
+          flex-direction: column;
+          text-align: center;
+        }
+        .accordion-button {
+          padding: 15px 20px;
+          font-size: 14px;
+        }
+      }
+    </style> -->
+  </head>
+  <body>
+    <!-- Top Bar -->
+    <!-- <div class="top-bar d-none d-lg-block">
+      <div class="container d-flex justify-content-between align-items-center">
+        <div class="contact-info">
+          <i class="fas fa-map-marker-alt text-white"></i> 14 Mohamed Mandour
+          St. Nasr City - Cairo
+        </div>
+        <div class="d-flex align-items-center">
+          <span
+            ><i class="fas fa-envelope text-white"></i> Email :
+            info@araborganizers.org</span
+          >
+          <span class="mx-3">|</span>
+          <a href="#">FAQ <i class="fas fa-caret-right"></i></a>
+          <div class="social-icons ml-4">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <!-- Placeholder for Logo -->
+          <img src="assets/logo xanadu.png" alt="Arab Organizers Logo" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li> -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                >Conferences</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="conferences.html">Upcoming</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Past</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="FAQ.html">FAQ</a>
+            </li>
+            <!-- <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                >News Letter</a
+              >
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="media-corner.html">Media Corner</a>
+            </li>
+          </ul>
+          <!-- <button class="search-btn"><i class="fas fa-search"></i></button> -->
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header (Hero) -->
+    <div class="page-header">
+      <div class="bg-img"></div>
+      <div class="overlay"></div>
+      <div class="content text-center text-white w-100 px-3">
+        <h1 class="mb-3 serif-font" data-aos="zoom-in" data-aos-duration="1000">
+          FAQ
+        </h1>
+        <p class="mb-0" data-aos="fade-up" data-aos-delay="200">
+          What is going on in your head?
+        </p>
+        <div class="breadcrumbs" data-aos="fade-up" data-aos-delay="400">
+          <i class="fas fa-home"></i> Home <span class="mx-2">/</span>
+          <span>FAQ</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ Main Section -->
+    <section class="faq-section">
+      <div class="container faq-container">
+        <div class="accordion" id="faqAccordion">
+          <!-- FAQ Item 1 -->
+          <div class="accordion-item" data-aos="fade-up" data-aos-delay="100">
+            <h2 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                <i
+                  class="far fa-dot-circle me-3"
+                  style="color: var(--primary-gold)"
+                ></i>
+                Why should I choose your company?
+              </button>
+            </h2>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse show"
+              aria-labelledby="headingOne"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                <p>
+                  <strong>Price:</strong> We provide the ultimate level of
+                  quality with the most reasonable price in the market.
+                </p>
+                <p>
+                  <strong>Convenience:</strong> Who doesn't want an easy and
+                  frictionless experience? we provide an easiness and
+                  flexibility to satisfy the client needs.
+                </p>
+                <p>
+                  <strong>Customer service:</strong> We love to serve you. Our
+                  employees are friendly, knowledgeable, and quick to respond.
+                  They are there to take care of you and your event.
+                </p>
+                <p>
+                  <strong>Trust:</strong> As we are dealing with the largest
+                  companies and the pioneers all over the world in the medical
+                  field. We gained a good reputation and became trustable for
+                  those who want to make outstanding events.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+            <h2 class="accordion-header" id="headingTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+              >
+                <i
+                  class="far fa-dot-circle me-3"
+                  style="color: var(--primary-gold)"
+                ></i>
+                What are the services you provide?
+              </button>
+            </h2>
+            <div
+              id="collapseTwo"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingTwo"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body d-flex align-items-center">
+                We provide an extensive list of services , check them out
+                <a href="services.html" class="btn-read-more-faq">Read More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="accordion-item" data-aos="fade-up" data-aos-delay="300">
+            <h2 class="accordion-header" id="headingThree">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseThree"
+                aria-expanded="false"
+                aria-controls="collapseThree"
+              >
+                <i
+                  class="far fa-dot-circle me-3"
+                  style="color: var(--primary-gold)"
+                ></i>
+                About Arab Organizers News!
+              </button>
+            </h2>
+            <div
+              id="collapseThree"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingThree"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                <p>
+                  We are seeking to provide the most recent news, information
+                  and knowledge related to the medical field.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="accordion-item" data-aos="fade-up" data-aos-delay="400">
+            <h2 class="accordion-header" id="headingFour">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseFour"
+                aria-expanded="false"
+                aria-controls="collapseFour"
+              >
+                <i
+                  class="far fa-dot-circle me-3"
+                  style="color: var(--primary-gold)"
+                ></i>
+                What are the webinars?
+              </button>
+            </h2>
+            <div
+              id="collapseFour"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingFour"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                <p>
+                  A webinar is an online event that is hosted by an Arab
+                  Organizers and broadcast to a group of individuals through
+                  their computers via the internet.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 5 -->
+          <div class="accordion-item" data-aos="fade-up" data-aos-delay="500">
+            <h2 class="accordion-header" id="headingFive">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseFive"
+                aria-expanded="false"
+                aria-controls="collapseFive"
+              >
+                <i
+                  class="far fa-dot-circle me-3"
+                  style="color: var(--primary-gold)"
+                ></i>
+                How can I join the webinar?
+              </button>
+            </h2>
+            <div
+              id="collapseFive"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingFive"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                <p>
+                  All you have to do is just follow our website for the newest
+                  announced webinars and submit your registration and an email
+                  will be sent to you through your email, contains all the
+                  details about the webinar.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 6 -->
+          <div class="accordion-item" data-aos="fade-up" data-aos-delay="600">
+            <h2 class="accordion-header" id="headingSix">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseSix"
+                aria-expanded="false"
+                aria-controls="collapseSix"
+              >
+                <i
+                  class="far fa-dot-circle me-3"
+                  style="color: var(--primary-gold)"
+                ></i>
+                How can I receive the conference / webinar certificate?
+              </button>
+            </h2>
+            <div
+              id="collapseSix"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingSix"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                <p>
+                  After the registration process you will receive an email
+                  contains a qr-code and conference / webinar information.
+                </p>
+                <p>
+                  When the conference is finished, printing certificate will be
+                  available through the conference page on our website all you
+                  have to do is to scan your QR-Code through our website.
+                  Congratulations you got your certificate &lt;3.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <h4>Contact Us</h4>
+            <ul class="footer-links footer-contact">
+              <li>
+                <i class="fas fa-map-marker-alt"></i> 14 Mohamed Mandour St.
+                Nasr City - Cairo
+              </li>
+              <li><i class="fas fa-envelope"></i> info@araborganizers.org</li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <h4>Our Services</h4>
+            <ul class="footer-links">
+              <li><a href="#">Our Gallery</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Latest News</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-12 mb-4">
+            <h4>Frequent Questions</h4>
+            <ul class="footer-links">
+              <li><a href="#">How Can I Set An Event?</a></li>
+              <li><a href="#">What Venues Do You Use?</a></li>
+              <li><a href="#">I have many questions, what to do?</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="d-flex align-items-center">
+            <img src="assets/logo xanadu.png" alt="Logo" class="me-3" />
+            <p class="mb-0" style="max-width: 400px; font-size: 11px">
+              Arab Organizers is full service provider rooted in the meetings
+              management. We have long-term experience in organizing all types
+              of conferences.
+            </p>
+          </div>
+          <div>
+            <div class="footer-social text-end mb-2">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p class="mb-0 text-muted">
+              © 2026 Arab Organizers. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <a href="#" class="scroll-top" id="scrollTop">
+      <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- Bootstrap & Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      // 1. Initialize AOS Animations
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 80,
+      });
+
+      // 2. Scroll to Top Button Logic
+      const scrollTopBtn = document.getElementById("scrollTop");
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 300) {
+          scrollTopBtn.classList.add("show");
+        } else {
+          scrollTopBtn.classList.remove("show");
+        }
+      });
+
+      scrollTopBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    </script>
+  </body>
+</html>

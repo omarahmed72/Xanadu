@@ -1,0 +1,903 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conference Details - Arab Organizers</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- <style>
+      /* ========================================== */
+      /* Core Variables matching style.css */
+      /* ========================================== */
+      :root {
+        --primary-red: #d32f2f;
+        --primary-red-hover: #b71c1c;
+        --dark-bg: #120923;
+        --darker-bg: #0a0414;
+        --text-gray: #6c757d;
+        --primary-beige: #f9e49e;
+        --primary-gold: #e2af64;
+        --primary-navy: #1a203c;
+        --primary-white: #ffffff;
+      }
+
+      html,
+      body {
+        overflow-x: clip;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        font-family: "Poppins", sans-serif;
+        background-color: #fafafa;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      .serif-font {
+        font-family: "Playfair Display", serif;
+      }
+
+      /* --- Top Bar --- */
+      .top-bar {
+        background-color: var(--primary-red);
+        font-size: 13px;
+        padding: 8px 0;
+        color: white;
+      }
+      .top-bar a {
+        color: white;
+        text-decoration: none;
+        margin-left: 10px;
+        transition: 0.3s;
+      }
+      .top-bar a:hover {
+        color: #f8f9fa;
+        opacity: 0.8;
+      }
+      .social-icons a {
+        margin-left: 15px;
+        font-size: 14px;
+      }
+
+      /* --- Navbar --- */
+      .navbar {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        padding: 15px 0;
+        background: var(--primary-navy);
+        transition: all 0.3s ease;
+      }
+      .navbar-brand img {
+        max-height: 50px;
+      }
+      .nav-link {
+        font-weight: 600;
+        font-size: 14px;
+        color: var(--primary-white) !important;
+        margin: 0 10px;
+        text-transform: capitalize;
+        transition: 0.3s;
+      }
+      .nav-link:hover,
+      .nav-link.active {
+        color: var(--primary-gold) !important;
+      }
+      .navbar-toggler {
+        border: 2px solid var(--primary-gold) !important;
+        outline: none !important;
+      }
+      .navbar-toggler .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(226,175,100)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      }
+
+      /* --- Page Header Banner --- */
+      .page-header {
+        position: relative;
+        height: 45vh;
+        min-height: 350px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+      .page-header .bg-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        z-index: 0;
+      }
+      .page-header .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(18, 9, 35, 0.85);
+        z-index: 1;
+      }
+      .page-header .content {
+        z-index: 2;
+        max-width: 900px;
+      }
+      .page-header h1 {
+        font-size: 2.8rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        line-height: 1.3;
+      }
+      .breadcrumbs {
+        margin-top: 20px;
+        background: rgba(255, 255, 255, 0.1);
+        display: inline-block;
+        padding: 8px 25px;
+        border-radius: 30px;
+        font-size: 14px;
+      }
+      .breadcrumbs span {
+        color: var(--primary-gold);
+      }
+
+      /* --- Details Main Section --- */
+      .details-section {
+        padding: 80px 0;
+        background-color: #ffffff;
+      }
+
+      /* Countdown Component */
+      .countdown-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 60px;
+        padding-bottom: 40px;
+        border-bottom: 1px solid #eee;
+      }
+      .countdown-wrapper h3 {
+        font-family: "Playfair Display", serif;
+        color: #555;
+        margin-right: 30px;
+        margin-bottom: 0;
+        font-size: 1.8rem;
+      }
+      .countdown-boxes {
+        display: flex;
+        gap: 15px;
+      }
+      .countdown-box {
+        border: 1px solid #ddd;
+        padding: 15px 20px;
+        text-align: center;
+        border-radius: 5px;
+        min-width: 90px;
+        background: #fdfdfd;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+      }
+      .countdown-num {
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: #333;
+        line-height: 1;
+        margin-bottom: 5px;
+        font-family: "Poppins", sans-serif;
+      }
+      .countdown-label {
+        font-size: 12px;
+        color: #777;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 500;
+      }
+
+      /* Image and Brochure Side */
+      .details-img-wrap {
+        margin-bottom: 30px;
+      }
+      .details-img-wrap img {
+        width: 100%;
+        border: 1px solid #eee;
+        padding: 5px;
+        background: white;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+      }
+      .brochure-box {
+        text-align: center;
+        margin-top: 30px;
+      }
+      .brochure-box h5 {
+        color: var(--primary-navy);
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+      .brochure-box p {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 15px;
+      }
+      .btn-download {
+        display: inline-block;
+        background-color: var(--primary-red);
+        color: white;
+        padding: 10px 30px;
+        font-size: 14px;
+        border-radius: 4px;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+      .btn-download:hover {
+        background-color: var(--primary-navy);
+        color: white;
+      }
+
+      /* Content Info Side */
+      .event-date-box {
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+      }
+      .event-date-box .date-cal {
+        color: var(--primary-red);
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 1;
+        text-align: center;
+        border-right: 2px solid #eee;
+        padding-right: 20px;
+        margin-right: 20px;
+      }
+      .event-date-box .date-cal span {
+        display: block;
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: var(--text-gray);
+        margin-top: 5px;
+      }
+      .event-date-box h2 {
+        font-size: 1.6rem;
+        color: var(--primary-navy);
+        margin: 0;
+        line-height: 1.4;
+      }
+
+      .info-label {
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 5px;
+        font-size: 15px;
+      }
+      .info-value {
+        color: #666;
+        font-size: 14px;
+        margin-bottom: 20px;
+      }
+      .info-value i {
+        color: var(--primary-red);
+        margin-right: 5px;
+      }
+
+      /* Registration Form */
+      .registration-wrapper {
+        margin-top: 40px;
+        padding-top: 30px;
+        border-top: 1px solid #eee;
+      }
+      .form-label {
+        font-size: 13px;
+        font-weight: 500;
+        color: #555;
+      }
+      .form-control,
+      .form-select {
+        border-radius: 4px;
+        border: 1px solid #ddd;
+        padding: 12px 15px;
+        font-size: 14px;
+        background-color: #fafafa;
+      }
+      .form-control:focus,
+      .form-select:focus {
+        border-color: var(--primary-gold);
+        box-shadow: 0 0 0 0.2rem rgba(226, 175, 100, 0.25);
+        background-color: #fff;
+      }
+      .recaptcha-mock {
+        border: 1px solid #d3d3d3;
+        background: #f9f9f9;
+        padding: 12px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 3px;
+        max-width: 250px;
+      }
+      .recaptcha-mock .left {
+        display: flex;
+        align-items: center;
+      }
+      .recaptcha-mock input[type="checkbox"] {
+        width: 24px;
+        height: 24px;
+        margin-right: 12px;
+        cursor: pointer;
+      }
+      .submit-btn {
+        background: var(--primary-navy);
+        color: white;
+        padding: 12px 40px;
+        border: none;
+        border-radius: 4px;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 1px;
+        transition: 0.3s;
+        margin-top: 10px;
+      }
+      .submit-btn:hover {
+        background: var(--primary-red);
+        color: white;
+      }
+
+      /* --- Footer --- */
+      .footer {
+        background-color: var(--primary-navy);
+        color: #aaa;
+        padding: 80px 0 30px;
+        overflow: hidden;
+      }
+      .footer h4 {
+        color: white;
+        font-size: 1.2rem;
+        margin-bottom: 25px;
+        position: relative;
+      }
+      .footer-contact li {
+        margin-bottom: 15px;
+        display: flex;
+        word-break: break-word;
+      }
+      .footer-contact i {
+        color: var(--primary-gold);
+        margin-right: 15px;
+        margin-top: 5px;
+      }
+      .footer-links {
+        list-style: none;
+        padding: 0;
+      }
+      .footer-links li {
+        margin-bottom: 12px;
+      }
+      .footer-links a {
+        color: #aaa;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+      .footer-links a:hover {
+        color: var(--primary-gold);
+        padding-left: 5px;
+      }
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        margin-top: 50px;
+        padding-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 13px;
+        gap: 20px;
+      }
+      .footer-social a {
+        color: #aaa;
+        margin-left: 15px;
+        transition: 0.3s;
+        display: inline-block;
+      }
+      .footer-social a:hover {
+        color: var(--primary-gold);
+      }
+
+      .scroll-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: var(--primary-gold);
+        color: white;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        text-decoration: none;
+        opacity: 0;
+        transition: 0.3s;
+        z-index: 999;
+      }
+      .scroll-top.show {
+        opacity: 1;
+      }
+      .scroll-top:hover {
+        color: var(--primary-navy);
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 767px) {
+        .page-header h1 {
+          font-size: 1.8rem;
+        }
+        .countdown-wrapper {
+          flex-direction: column;
+          text-align: center;
+        }
+        .countdown-wrapper h3 {
+          margin-right: 0;
+          margin-bottom: 20px;
+        }
+        .event-date-box {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .event-date-box .date-cal {
+          border-right: none;
+          border-bottom: 2px solid #eee;
+          padding-right: 0;
+          padding-bottom: 15px;
+          margin-right: 0;
+          margin-bottom: 15px;
+          width: 100%;
+          text-align: left;
+        }
+        .footer-bottom {
+          flex-direction: column;
+          text-align: center;
+        }
+        .footer-bottom .d-flex {
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+    </style> -->
+  </head>
+  <body>
+    <!-- Top Bar -->
+    <!-- <div class="top-bar d-none d-lg-block">
+      <div class="container d-flex justify-content-between align-items-center">
+        <div class="contact-info">
+          <i class="fas fa-map-marker-alt text-white"></i> 14 Mohamed Mandour
+          St. Nasr City - Cairo
+        </div>
+        <div class="d-flex align-items-center">
+          <span
+            ><i class="fas fa-envelope text-white"></i> Email :
+            info@araborganizers.org</span
+          >
+          <span class="mx-3">|</span>
+          <a href="#">FAQ <i class="fas fa-caret-right"></i></a>
+          <div class="social-icons ml-4">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <!-- Placeholder for Logo -->
+          <img src="assets/logo xanadu.png" alt="Arab Organizers Logo" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li> -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                >Conferences</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="conferences.html">Upcoming</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Past</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="FAQ.html">FAQ</a>
+            </li>
+            <!-- <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                >News Letter</a
+              >
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="media-corner.html">Media Corner</a>
+            </li>
+          </ul>
+          <!-- <button class="search-btn"><i class="fas fa-search"></i></button> -->
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header (Hero) -->
+    <div class="page-header">
+      <div class="bg-img"></div>
+      <div class="overlay"></div>
+      <div class="content text-center text-white px-3">
+        <h1 class="mb-3 serif-font" data-aos="zoom-in" data-aos-duration="1000">
+          The 14th International ESHA Conference Next-Gen Hematology: Bridging
+          Bench To Bedside
+        </h1>
+        <div class="breadcrumbs" data-aos="fade-up" data-aos-delay="200">
+          <i class="fas fa-home"></i> Home <span class="mx-2">/</span>
+          <span>conferences</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Conference Details Section -->
+    <section class="details-section">
+      <div class="container">
+        <!-- Countdown Section -->
+        <div class="countdown-wrapper" data-aos="fade-up">
+          <h3 class="serif-font">Our Event Starts in:</h3>
+          <div class="countdown-boxes" id="countdown-timer">
+            <div class="countdown-box">
+              <div class="countdown-num" id="days">16</div>
+              <div class="countdown-label">Days</div>
+            </div>
+            <div class="countdown-box">
+              <div class="countdown-num" id="hours">22</div>
+              <div class="countdown-label">Hours</div>
+            </div>
+            <div class="countdown-box">
+              <div class="countdown-num" id="minutes">18</div>
+              <div class="countdown-label">Minutes</div>
+            </div>
+            <div class="countdown-box">
+              <div class="countdown-num" id="seconds">44</div>
+              <div class="countdown-label">Seconds</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <!-- Left Column (Flyer & Brochure) -->
+          <div class="col-lg-4 col-md-5 mb-5 mb-md-0" data-aos="fade-right">
+            <div class="details-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="Conference Poster"
+              />
+            </div>
+            <div class="brochure-box">
+              <h5 class="serif-font">Conference Brochure</h5>
+              <p>Click below:</p>
+              <a href="#" class="btn-download"
+                ><i class="fas fa-file-pdf me-2"></i> Download PDF</a
+              >
+            </div>
+          </div>
+
+          <!-- Right Column (Info & Registration) -->
+          <div class="col-lg-8 col-md-7 ps-lg-5" data-aos="fade-left">
+            <div class="event-date-box">
+              <div class="date-cal">03<span>JUN</span></div>
+              <h2 class="serif-font">
+                the 14th international ESHA Conference Next-Gen Hematology:
+                Bridging Bench to Bedside
+              </h2>
+            </div>
+
+            <div class="info-label">Description:</div>
+            <div class="info-value">
+              Hilton Cairo Heliopolis |
+              <i class="far fa-calendar-alt ms-2"></i> Jun 03, 2026 - Jun 04,
+              2026
+            </div>
+
+            <div class="info-label">Location:</div>
+            <div class="info-value">
+              <i class="fas fa-map-marker-alt"></i> Hilton Cairo Heliopolis
+            </div>
+
+            <!-- Registration Form -->
+            <div class="registration-wrapper">
+              <h4 class="serif-font mb-4">Registration:</h4>
+              <form>
+                <div class="row g-3">
+                  <!-- Name -->
+                  <div class="col-md-6">
+                    <label class="form-label"
+                      >Name <span class="text-danger">*</span></label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Your name*"
+                      required
+                    />
+                  </div>
+                  <!-- Email -->
+                  <div class="col-md-6">
+                    <label class="form-label"
+                      >Email address <span class="text-danger">*</span></label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Your email*"
+                      required
+                    />
+                  </div>
+                  <!-- Mobile -->
+                  <div class="col-md-6">
+                    <label class="form-label"
+                      >Mobile <span class="text-danger">*</span></label
+                    >
+                    <input
+                      type="tel"
+                      class="form-control"
+                      placeholder="Your Mobile*"
+                      required
+                    />
+                  </div>
+                  <!-- Title -->
+                  <div class="col-md-6">
+                    <label class="form-label"
+                      >Title <span class="text-danger">*</span></label
+                    >
+                    <select class="form-select" required>
+                      <option value="" selected disabled>
+                        Select your title...
+                      </option>
+                      <option value="Mr">Mr.</option>
+                      <option value="Ms">Ms.</option>
+                      <option value="Dr">Dr.</option>
+                      <option value="Prof">Prof.</option>
+                    </select>
+                  </div>
+                  <!-- Country -->
+                  <div class="col-md-6">
+                    <label class="form-label"
+                      >Country <span class="text-danger">*</span></label
+                    >
+                    <select class="form-select" required>
+                      <option value="" selected disabled>
+                        Select Country...
+                      </option>
+                      <option value="EG">Egypt</option>
+                      <option value="SA">Saudi Arabia</option>
+                      <option value="AE">UAE</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+                  <!-- Speciality -->
+                  <div class="col-md-6">
+                    <label class="form-label"
+                      >Speciality <span class="text-danger">*</span></label
+                    >
+                    <select class="form-select" required>
+                      <option value="" selected disabled>
+                        Select speciality...
+                      </option>
+                      <option value="Hematology">Hematology</option>
+                      <option value="Oncology">Oncology</option>
+                      <option value="Pharmacy">Pharmacy</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+                  <!-- University -->
+                  <div class="col-md-12">
+                    <label class="form-label">University:</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Your university..."
+                    />
+                  </div>
+
+                  <!-- reCAPTCHA Mockup -->
+                  <div class="col-md-12 mt-4">
+                    <div class="recaptcha-mock">
+                      <div class="left">
+                        <input type="checkbox" id="robotCheck" />
+                        <label
+                          for="robotCheck"
+                          class="m-0"
+                          style="font-size: 14px; color: #555"
+                          >I'm not a robot</label
+                        >
+                      </div>
+                      <div class="right">
+                        <img
+                          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/RecaptchaLogo.svg/1200px-RecaptchaLogo.svg.png"
+                          width="30"
+                          alt="reCAPTCHA"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Submit -->
+                  <div class="col-md-12 mt-4">
+                    <button type="submit" class="submit-btn">
+                      Submit <i class="fas fa-chevron-right ms-2"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!-- End Registration Form -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <h4>Contact Us</h4>
+            <ul class="footer-links footer-contact">
+              <li>
+                <i class="fas fa-map-marker-alt"></i> 14 Mohamed Mandour St.
+                Nasr City - Cairo
+              </li>
+              <li><i class="fas fa-envelope"></i> info@araborganizers.org</li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <h4>Our Services</h4>
+            <ul class="footer-links">
+              <li><a href="#">Our Gallery</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Latest News</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-12 mb-4">
+            <h4>Frequent Questions</h4>
+            <ul class="footer-links">
+              <li><a href="#">How Can I Set An Event?</a></li>
+              <li><a href="#">What Venues Do You Use?</a></li>
+              <li><a href="#">I have many questions, what to do?</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="d-flex align-items-center">
+            <img src="assets/logo xanadu.png" alt="Logo" class="me-3" />
+            <p class="mb-0" style="max-width: 400px; font-size: 11px">
+              Arab Organizers is full service provider rooted in the meetings
+              management. We have long-term experience in organizing all types
+              of conferences.
+            </p>
+          </div>
+          <div>
+            <div class="footer-social text-end mb-2">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p class="mb-0 text-muted">
+              © 2026 Arab Organizers. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <a href="#" class="scroll-top" id="scrollTop">
+      <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- Bootstrap & Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      // Initialize AOS Animations
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 80,
+      });
+
+      // Simple Countdown Logic
+      const updateCountdown = () => {
+        let secondsElement = document.getElementById("seconds");
+        let seconds = parseInt(secondsElement.innerText);
+
+        if (seconds > 0) {
+          secondsElement.innerText = seconds - 1;
+        } else {
+          secondsElement.innerText = 59;
+          // You could expand this to logic handling minutes, hours, days
+        }
+      };
+      // Tick every second to simulate a live timer visually
+      setInterval(updateCountdown, 1000);
+
+      // Scroll to Top Button Logic
+      const scrollTopBtn = document.getElementById("scrollTop");
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 300) {
+          scrollTopBtn.classList.add("show");
+        } else {
+          scrollTopBtn.classList.remove("show");
+        }
+      });
+
+      scrollTopBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    </script>
+  </body>
+</html>
