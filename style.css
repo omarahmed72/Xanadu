@@ -335,39 +335,44 @@ p {
   margin-bottom: 60px;
 }
 .services-section .section-title::after {
-  content: "﹋﹋﹋";
+  /* content: "﹋﹋﹋"; */
   display: block;
   color: var(--text-gray);
   font-size: 20px;
   letter-spacing: 5px;
   margin-top: 10px;
 }
-.service-box {
+.services-section .service-box {
   padding: 40px 20px;
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.05);
   transition: all 0.4s ease;
   height: 100%;
 }
-.service-box:hover {
+.services-section .service-box:hover {
   background-color: rgba(255, 255, 255, 0.03);
   transform: translateY(-10px);
   border-color: var(--primary-gold);
 }
-.service-icon {
+.services-section .service-icon {
   font-size: 40px;
   color: white;
   margin-bottom: 20px;
   transition: color 0.3s;
+  transform: rotate(0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.service-box:hover .service-icon {
+.services-section .service-box:hover .service-icon {
   color: var(--primary-gold);
 }
-.service-box h4 {
+.services-section .service-box h4 {
   font-size: 1.2rem;
   margin-bottom: 15px;
 }
-.service-box p {
+.services-section .service-box p {
   color: #aaa;
   font-size: 14px;
   line-height: 1.7;
@@ -387,7 +392,7 @@ p {
   color: var(--primary-gold);
 }
 .events-section .section-title::after {
-  content: "﹋﹋﹋";
+  /* content: "﹋﹋﹋"; */
   display: block;
   color: #ccc;
   font-size: 20px;
@@ -503,7 +508,7 @@ p {
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.1); */
   color: white;
-  padding: 60px;
+  padding: 40px;
   width: 55%;
   position: absolute;
   right: 0;
@@ -524,6 +529,7 @@ p {
   display: flex;
   align-items: center;
   margin-bottom: 30px;
+  margin-right: 18rem;
 }
 .client-info img {
   width: 60px;
@@ -558,6 +564,29 @@ p {
   line-height: 1;
 }
 
+.testimonialSwiper {
+  --swiper-pagination-color: var(--primary-gold);
+  --swiper-pagination-bullet-inactive-color: #fff;
+  --swiper-pagination-bullet-inactive-opacity: 0.5;
+}
+
+@media (max-width: 767px) {
+  .client-info {
+    margin-right: 5rem;
+  }
+  .testi-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  .testi-content {
+    padding: 20px;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.1);
+  }
+}
+
 /* --- Clients Section --- */
 .clients-section {
   padding: 80px 0;
@@ -572,7 +601,7 @@ p {
   color: var(--primary-gold);
 }
 .clients-section .section-title::after {
-  content: "﹋﹋﹋";
+  /* content: "﹋﹋﹋"; */
   display: block;
   color: #ccc;
   font-size: 20px;
@@ -587,6 +616,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 .client-logo img {
   max-width: 150px;
@@ -618,6 +648,12 @@ p {
   font-size: 1.2rem;
   margin-bottom: 25px;
   position: relative;
+}
+
+.footer-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 .footer-contact li {
   margin-bottom: 15px;
@@ -777,20 +813,21 @@ p {
 /* --- Page Header Banner --- */
 .page-header {
   position: relative;
-  height: 45vh;
+  /* height: 75vh; */
+  height: 80vh;
   min-height: 350px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
-.page-header .bg-img {
+.page-header .services-bg-img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80");
+  background-image: url("assets/service_bg.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -948,6 +985,7 @@ p {
   color: white;
   transform: rotate(-45deg);
   transition: color 0.3s;
+  margin: auto;
 }
 .service-item-box:hover .service-icon {
   color: var(--primary-navy);
@@ -990,7 +1028,7 @@ p {
 /* ============================== */
 
 /* --- Page Header Banner --- */
-.page-header {
+/* .page-header {
   position: relative;
   height: 45vh;
   min-height: 350px;
@@ -998,14 +1036,14 @@ p {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-}
-.page-header .bg-img {
+} */
+.page-header .about-bg-img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80");
+  background-image: url("assets/about_bg.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -1126,6 +1164,7 @@ p {
   margin-bottom: 15px;
   font-size: 15px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 .mission-list li i {
@@ -1262,7 +1301,7 @@ p {
 /* ============================== */
 
 /* --- Page Header Banner --- */
-.page-header {
+/* .page-header {
   position: relative;
   height: 45vh;
   min-height: 350px;
@@ -1270,7 +1309,7 @@ p {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-}
+} */
 .page-header .bg-img {
   position: absolute;
   top: 0;
@@ -1552,7 +1591,7 @@ p {
 /* ============================== */
 
 /* --- Page Header Banner --- */
-.page-header {
+/* .page-header {
   position: relative;
   height: 45vh;
   min-height: 350px;
@@ -1560,7 +1599,7 @@ p {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-}
+} */
 .page-header .bg-img {
   position: absolute;
   top: 0;
@@ -1822,7 +1861,7 @@ p {
 /* ============================== */
 
 /* --- Page Header Banner --- */
-.page-header {
+/* .page-header {
   position: relative;
   height: 45vh;
   min-height: 350px;
@@ -1830,7 +1869,7 @@ p {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-}
+} */
 .page-header .bg-img {
   position: absolute;
   top: 0;
@@ -2039,7 +2078,7 @@ p {
 /* ============================== */
 
 /* --- Page Header Banner --- */
-.page-header {
+/* .page-header {
   position: relative;
   height: 45vh;
   min-height: 350px;
@@ -2047,7 +2086,7 @@ p {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-}
+} */
 .page-header .bg-img {
   position: absolute;
   top: 0;
@@ -2282,7 +2321,7 @@ p {
 /* ============================== */
 
 /* --- Page Header Banner --- */
-.page-header {
+/* .page-header {
   position: relative;
   height: 45vh;
   min-height: 350px;
@@ -2290,7 +2329,7 @@ p {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-}
+} */
 .page-header .bg-img {
   position: absolute;
   top: 0;

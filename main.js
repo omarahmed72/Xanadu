@@ -90,3 +90,17 @@ new Swiper(".clientsSwiper", {
     992: { slidesPerView: 5, spaceBetween: 50 },
   },
 });
+
+// 6. Initialize Swiper for Testimonial Content
+new Swiper(".testimonialSwiper", {
+  loop: true,
+  grabCursor: true,
+  // autoplay: {
+  //   delay: 5000,
+  //   disableOnInteraction: false,
+  // },
+  pagination: {
+    el: ".testimonialSwiper .swiper-pagination",
+    clickable: true,
+  },
+});
