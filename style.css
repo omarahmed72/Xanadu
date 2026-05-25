@@ -348,41 +348,7 @@ p {
   letter-spacing: 5px;
   margin-top: 10px;
 }
-.services-section .service-box {
-  padding: 40px 20px;
-  text-align: center;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  transition: all 0.4s ease;
-  height: 100%;
-}
-.services-section .service-box:hover {
-  background-color: rgba(255, 255, 255, 0.03);
-  transform: translateY(-10px);
-  border-color: var(--primary-gold);
-}
-.services-section .service-icon {
-  font-size: 40px;
-  color: white;
-  margin-bottom: 20px;
-  transition: color 0.3s;
-  transform: rotate(0);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.services-section .service-box:hover .service-icon {
-  color: var(--primary-gold);
-}
-.services-section .service-box h4 {
-  font-size: 1.2rem;
-  margin-bottom: 15px;
-}
-.services-section .service-box p {
-  color: #aaa;
-  font-size: 14px;
-  line-height: 1.7;
-}
+
 
 /* --- Events Section --- */
 .events-section {
@@ -628,10 +594,10 @@ p {
   max-width: 150px;
   max-height: 80px;
   object-fit: contain;
-  opacity: 0.6;
+  /* opacity: 0.6; */
   transition: 0.3s;
   cursor: grab;
-  filter: grayscale(100%);
+  /* filter: grayscale(100%); */
 }
 .client-logo img:active {
   cursor: grabbing;
@@ -2724,3 +2690,39 @@ p {
     text-align: center;
   }
 }
+
+/* Services Swiper Desktop Wrap */
+@media (min-width: 768px) {
+  .services-wrapper {
+    flex-wrap: wrap;
+    transform: none !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .servicesSwiper .swiper-pagination {
+    display: none;
+  }
+}
+
+.services-wrapper.row {
+  flex-wrap: nowrap;
+}
+@media (min-width: 768px) {
+  .services-wrapper.row {
+    flex-wrap: wrap;
+  }
+}
+
+.servicesSwiper .swiper-slide {
+  height: auto;
+}
+
+.services-grid-section .service-item-box {
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+

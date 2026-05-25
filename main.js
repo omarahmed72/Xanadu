@@ -81,7 +81,7 @@ new Swiper(".clientsSwiper", {
   loop: true,
   grabCursor: true,
   autoplay: {
-    delay: 2000,
+    delay: 700,
     disableOnInteraction: false,
   },
   breakpoints: {
@@ -103,4 +103,30 @@ new Swiper(".testimonialSwiper", {
     el: ".testimonialSwiper .swiper-pagination",
     clickable: true,
   },
+});
+
+// 7. Initialize Swiper for Services Section (Mobile Only)
+new Swiper(".servicesSwiper", {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  loop: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".servicesSwiper .swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    576: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    768: {
+      enabled: false,
+      slidesPerView: 3,
+      spaceBetween: 0,
+    }
+  }
 });
