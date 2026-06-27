@@ -187,6 +187,38 @@ p {
   background-position: center -10rem;
 }
 
+/* Responsive adjustments for Hero Section images and sizes */
+@media (max-width: 1400px) {
+  .hero-bg1 { background-position: center -20rem; }
+  .hero-bg2 { background-position: center -25rem; }
+  .hero-bg3 { background-position: center -5rem; }
+}
+
+@media (max-width: 1200px) {
+  .hero-section { height: 70vh; min-height: 450px; }
+  .hero-bg1 { background-position: center -15rem; }
+  .hero-bg2 { background-position: center -20rem; }
+  .hero-bg3 { background-position: center 0; }
+}
+
+@media (max-width: 991px) {
+  .hero-section { height: 60vh; min-height: 400px; }
+  .hero-bg1, .hero-bg2, .hero-bg3 {
+    background-position: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-section { height: 50vh; min-height: 350px; }
+  .hero-bg1, .hero-bg2, .hero-bg3 {
+    background-position: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section { height: 40vh; min-height: 300px; }
+}
+
 .swiper-slide-active .hero-bg1,
 .swiper-slide-duplicate-active .hero-bg1 {
   transform: scale(1.15);
