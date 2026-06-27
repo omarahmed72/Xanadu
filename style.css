@@ -288,10 +288,24 @@ p {
 }
 
 .hero-content h1 {
-  font-size: 3.5rem;
+  font-size: clamp(2.2rem, 5vw + 1rem, 4rem);
   font-weight: 700;
   line-height: 1.2;
-  margin-bottom: 20px;
+  margin-bottom: clamp(10px, 2vw, 20px);
+}
+
+.hero-content .subtitle-list {
+  font-size: clamp(0.9rem, 1.5vw + 0.5rem, 1.25rem) !important;
+}
+
+.hero-content p.lead {
+  font-size: clamp(1rem, 1.5vw + 0.5rem, 1.25rem);
+}
+
+.hero-content .btn-custom,
+.hero-content .btn-outline-custom {
+  font-size: clamp(0.85rem, 1vw + 0.5rem, 1rem);
+  padding: clamp(10px, 1.5vw, 15px) clamp(20px, 3vw, 35px);
 }
 .btn-custom {
   background-color: var(--primary-navy);
@@ -818,12 +832,7 @@ p {
   .testi-content {
     padding: 40px;
   }
-  .hero-content h1 {
-    font-size: 2.2rem;
-  }
-  .hero-content .subtitle-list {
-    font-size: 1rem !important;
-  }
+  /* Fluid typography now handles hero-content text sizes */
 }
 
 @media (max-width: 767px) {
